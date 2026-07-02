@@ -80,6 +80,10 @@ http://localhost:8080/assistant
 
 응답이 오지 않으면 Ollama 서버가 실행 중인지 확인합니다. 모델이 없으면 `ollama pull qwen2.5:7b`를 먼저 실행합니다.
 
+## 실행 화면
+
+![Spring AI 학습 도우미 실행 화면](docs/images/assistant-ui.png)
+
 ## API 테스트
 
 메인 assistant endpoint:
