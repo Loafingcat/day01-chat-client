@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>데이터 플랫폼 학습 도우미</title>
+    <link rel="stylesheet" href="/css/assistant.css">
+</head>
+<body>
+<div class="app-shell">
+    <header class="app-header">
+        <div>
+            <p class="eyebrow">Loafingcat/data-platform</p>
+            <h1>데이터 플랫폼 학습 도우미</h1>
+        </div>
+        <div class="header-status">
+            <span class="status-dot"></span>
+            <span>Ollama qwen2.5:7b</span>
+        </div>
+    </header>
+
+    <main class="workspace">
+        <aside class="sidebar" aria-label="학습 주제">
+            <section class="panel">
+                <div class="panel-title">주제</div>
+                <div class="topic-list" id="topicList"></div>
+            </section>
+
+            <section class="panel">
+                <div class="panel-title">최근 질문</div>
+                <div class="recent-actions">
+                    <button class="text-button" id="clearRecentButton" type="button">전체 삭제</button>
+                </div>
+                <div class="recent-list" id="recentList"></div>
+            </section>
+        </aside>
+
+        <section class="chat-area" aria-label="채팅">
+            <div class="messages" id="messages" aria-live="polite"></div>
+
+            <section class="quick-panel" aria-label="빠른 질문과 학습 모드">
+                <div>
+                    <div class="panel-title">빠른 질문</div>
+                    <div class="button-row" id="quickQuestions"></div>
+                </div>
+                <div>
+                    <div class="panel-title">학습 모드</div>
+                    <div class="button-row" id="modeButtons"></div>
+                </div>
+            </section>
+
+            <form class="composer" id="chatForm">
+                <textarea id="messageInput" rows="3" placeholder="궁금한 내용을 입력하세요. 예: Spark checkpoint와 upsert는 어떻게 연결돼?"></textarea>
+                <div class="composer-actions">
+                    <button class="secondary-button" id="clearChatButton" type="button">대화 초기화</button>
+                    <button class="primary-button" id="sendButton" type="submit">전송</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="/js/assistant.js"></script>
+</body>
+</html>
